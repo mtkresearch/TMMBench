@@ -1,2 +1,4 @@
 # TMMBench
-TMMBench - Taiwan Multi-modal Model Benchmark
+TMMBench - **T**aiwan **M**ulti-modal **M**odel **Bench**mark
+
+Release in the near future.
