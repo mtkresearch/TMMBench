@@ -75,7 +75,7 @@ The benchmark is composed of 9 categories, including 290 questions:
 
 ```
 @software{tmmbench,
-  author = {Chia-Sheng Liu and Yi-Chang Chen and YT Hsu and Ruhung Huang and Meng-Hsi Chen and Da-Shan Shiu},
+  author = {Chia-Sheng Liu and Yi-Chang Chen and Yu-Ting Hsu and Ru-Hung Huang and Meng-Hsi Chen and Da-Shan Shiu},
   title = {TMMBench - Taiwan Multi-modal Model Benchmark},
   month = April,
   year = 2025,
