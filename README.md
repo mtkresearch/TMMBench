@@ -69,3 +69,16 @@ The benchmark is composed of 9 categories, including 290 questions:
    - `--model_name`: Path to your model (default: Llama-Breeze2-3B-Instruct)
    - `--backend`: Inference backend (options: hf, vllm, openai_api)
    - `--log_dir`: Directory to store results
+
+
+## Citation 
+
+```
+@software{tmmbench,
+  author = {Chia-Sheng Liu and Yi-Chang Chen and YT Hsu and Ruhung Huang and Meng-Hsi Chen and Da-Shan Shiu},
+  title = {TMMBench - Taiwan Multi-modal Model Benchmark},
+  month = April,
+  year = 2025,
+  url = {https://github.com/mtkresearch/TMMBench}
+}
+```
