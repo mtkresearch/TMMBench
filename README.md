@@ -39,7 +39,7 @@ The benchmark is composed of 9 categories, including 290 questions:
 
 2. **Download Benchmark Data**
 
-   Download the evaluation data from the `MediaTek-Research/TMMBench` repository and set up as follows:
+   Download the evaluation data from the `MediaTek-Research/TMMBench` huggingface repository and set up as follows:
    - Create an `eval_data` folder in the project root if it doesn't exist
    - Place `Question_multiplechoice.tsv` in the `eval_data` folder
 
