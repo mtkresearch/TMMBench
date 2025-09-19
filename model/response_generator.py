@@ -4,6 +4,7 @@ from pathlib import Path
 import json
 import os
 import argparse
+import base64
 
 from model.backend import (
     openai_api,
@@ -58,6 +59,33 @@ class ResponseGenerator:
 
         # Prepare model with the specified backend
         self.model = self._prepare_inference_backend(self.backend)
+
+        # Decode and save images
+        self._decode_and_save_images()
+
+    def _decode_and_save_images(self) -> None:
+        """
+        Decode base64 images from the dataset and save them to the 'data/image' directory.
+        """
+        image_dir = Path("data/image")
+        image_dir.mkdir(parents=True, exist_ok=True)
+
+        def _save_image(example: dict) -> dict:
+            image_path = image_dir / f"mcq_image_{example['id']}.png"
+            if image_path.exists():
+                return example
+
+            if "image" in example and example["image"]:
+                try:
+                    # Decode the base64 string
+                    image_data = base64.b64decode(example["image"])
+                    with open(image_path, "wb") as f:
+                        f.write(image_data)
+                except (base64.binascii.Error, TypeError) as e:
+                    print(f"Warning: Could not decode image for id {example['id']}. Error: {e}")
+            return example
+
+        self.questions_dataset.map(_save_image)
 
     def load_questions(self, question_path: str) -> Dataset:
         """
