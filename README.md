@@ -56,7 +56,7 @@ The benchmark is composed of 9 categories, including 290 questions:
    The `run_eval.py` script handles both response generation and judgment via GPT-4o:
 
    ```bash
-   python run_eval.py
+   CUDA_VISIBLE_DEVICES=0 python run_eval.py --model_name {model_path} --log_dir ./logs
    ```
 
 3. **Additional Options**
