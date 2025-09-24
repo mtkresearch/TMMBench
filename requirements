@@ -1,6 +1,7 @@
 mtkresearch
 openai
-transformers
 tqdm
-vllm
-
+transformers==4.46.3
+datasets==2.21.0
+accelerate==1.0.1
+timm
